@@ -61,7 +61,7 @@ const NewUser = () => {
           value={isActive}
           onChange={(e) => setIsActive(e.target.value)}
         />
-        <button>isActive</button>
+        <button>Create User</button>
       </form>
     </div>
   );

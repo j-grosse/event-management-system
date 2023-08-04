@@ -60,14 +60,14 @@ const UpdateUser = () => {
         <input
           type="text"
           name="phoneNumber"
-          value={phoneNumber}
+          value={user?.phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
         />
         <label htmlFor="">Active</label>
         <input
           type="text"
           name="isActive"
-          value={isActive}
+          value={user?.isActive}
           onChange={(e) => setIsActive(e.target.value)}
         />
         <button>Update User</button>
