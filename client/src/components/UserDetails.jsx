@@ -26,6 +26,8 @@ const UserDetails = () => {
           <h2>{user.name}</h2>
           <p>Email: {user.email}</p>
           <p>Age: {user.age}</p>
+          <p>Phone: {user.email}</p>
+          <p>Active: {user.age}</p>
           <Link to={`/users/${id}/update`}>Update User</Link>
           <button onClick={handleDelete}>Delete User</button>
         </>

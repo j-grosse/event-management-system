@@ -5,6 +5,7 @@ const UpdateUser = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [user, setUser] = useState();
+
   useEffect(() => {
     axios
       .get(`/api/users/${id}`)
@@ -54,6 +55,20 @@ const UpdateUser = () => {
           name="age"
           value={user?.age || ''}
           onChange={handleChange}
+        />
+        <label htmlFor="">Phone</label>
+        <input
+          type="text"
+          name="phoneNumber"
+          value={phoneNumber}
+          onChange={(e) => setPhoneNumber(e.target.value)}
+        />
+        <label htmlFor="">Active</label>
+        <input
+          type="text"
+          name="isActive"
+          value={isActive}
+          onChange={(e) => setIsActive(e.target.value)}
         />
         <button>Update User</button>
       </form>

@@ -5,7 +5,9 @@ const NewUser = () => {
   const navigate = useNavigate();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [age, setage] = useState('');
+  const [age, setAge] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [isActive, setIsActive] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
     // let defaultImage = ""
@@ -43,9 +45,23 @@ const NewUser = () => {
           type="text"
           name="age"
           value={age}
-          onChange={(e) => setage(e.target.value)}
+          onChange={(e) => setAge(e.target.value)}
         />
-        <button>Add User</button>
+        <label htmlFor="">Phone</label>
+        <input
+          type="text"
+          name="phoneNumber"
+          value={phoneNumber}
+          onChange={(e) => setPhoneNumber(e.target.value)}
+        />
+        <label htmlFor="">Active</label>
+        <input
+          type="text"
+          name="isActive"
+          value={isActive}
+          onChange={(e) => setIsActive(e.target.value)}
+        />
+        <button>isActive</button>
       </form>
     </div>
   );
