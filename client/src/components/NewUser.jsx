@@ -14,7 +14,7 @@ const NewUser = () => {
     // {image: image || defaultImage}
 
     axios
-      .post(`/api/users`, { name, email, age })
+      .post(`/api/users`, { name, email, age, phoneNumber, isActive })
       .then((res) => {
         console.log(res.data);
         navigate('/');
