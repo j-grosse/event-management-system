@@ -1,18 +1,18 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Books from './Books';
-import NewBook from './NewBook';
-import BookDetails from './BookDetails';
-import UpdateBook from './UpdateBook';
+import Users from './Users';
+import NewUser from './NewUser';
+import UserDetails from './UserDetails';
+import UpdateUser from './UpdateUser';
 
 const Main = () => {
   return (
     <main>
       <Routes>
-        <Route path="/" element={<Books />} />
-        <Route path="/books/new" element={<NewBook />} />
-        <Route path="/books/:id" element={<BookDetails />} />
-        <Route path="/books/:id/update" element={<UpdateBook />} />
+        <Route path="/" element={<Users />} />
+        <Route path="/users/new" element={<NewUser />} />
+        <Route path="/users/:id" element={<UserDetails />} />
+        <Route path="/users/:id/update" element={<UpdateUser />} />
       </Routes>
     </main>
   );
