@@ -21,5 +21,5 @@ if (process.env.NODE_ENV === 'production') {
   app.get('*', (req, res) => res.sendFile(path.join(buildPath, 'index.html')));
 }
 connectDB().then(() => {
-  app.listen(PORT, () => console.log('🚀 ~ file: index.js:22 ~ PORT:', PORT));
+  app.listen(PORT, () => console.log('🚀 ~ file: index.js:23 ~ PORT:', PORT));
 });

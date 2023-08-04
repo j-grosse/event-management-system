@@ -10,11 +10,9 @@ const NewUser = () => {
   const [isActive, setIsActive] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
-    // let defaultImage = ""
-    // {image: image || defaultImage}
 
     axios
-      .post(`/api/users`, { name, email, age, phoneNumber, isActive })
+      .post(`/api/users/new`, { name, email, age, phoneNumber, isActive })
       .then((res) => {
         console.log(res.data);
         navigate('/');
