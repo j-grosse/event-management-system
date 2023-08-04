@@ -1,7 +1,5 @@
 const User = require('../models/users');
 
-
-# 
 const createUser = async (req, res) => {
   try {
     const newUser = await User.create(req.body);
@@ -44,8 +42,13 @@ const updateUser = async (req, res) => {
       body,
     } = req;
     // const updatedUser = await User.findByIdAndUpdate()
-    const updatedUser = await User.findOneAndUpdate({ _id: id }, body, { new: true });
-    console.log('🚀 ~ file: users.js:46 ~ updateUser ~ updatedUser:', updatedUser);
+    const updatedUser = await User.findOneAndUpdate({ _id: id }, body, {
+      new: true,
+    });
+    console.log(
+      '🚀 ~ file: users.js:46 ~ updateUser ~ updatedUser:',
+      updatedUser
+    );
     if (!updatedUser) {
       res.status(404).json({ message: 'User Not Found' });
     }
@@ -61,7 +64,10 @@ const deleteUser = async (req, res) => {
     } = req;
     // const deletedUser = await User.findByIdAndDelete()
     const deletedUser = await User.findOneAndDelete({ _id: id });
-    console.log('🚀 ~ file: users.js:62 ~ deleteUser ~ deletedUser:', deletedUser);
+    console.log(
+      '🚀 ~ file: users.js:62 ~ deleteUser ~ deletedUser:',
+      deletedUser
+    );
     if (!deletedUser) {
       res.status(404).json({ message: 'User Not Found' });
     }
