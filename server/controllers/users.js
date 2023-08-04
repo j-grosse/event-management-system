@@ -1,5 +1,7 @@
 const User = require('../models/users');
 
+
+# 
 const createUser = async (req, res) => {
   try {
     const newUser = await User.create(req.body);

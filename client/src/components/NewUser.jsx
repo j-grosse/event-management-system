@@ -3,16 +3,16 @@ import { useNavigate } from 'react-router-dom';
 import axios from '../axiosInstance';
 const NewUser = () => {
   const navigate = useNavigate();
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
-  const [year, setYear] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [age, setage] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
     // let defaultImage = ""
     // {image: image || defaultImage}
 
     axios
-      .post(`/api/users`, { title, author, year })
+      .post(`/api/users`, { name, email, age })
       .then((res) => {
         console.log(res.data);
         navigate('/');
@@ -23,27 +23,27 @@ const NewUser = () => {
     <div>
       <h2>Add User</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="">Title</label>
+        <label htmlFor="">Name</label>
         <input
           type="text"
-          name="title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          name="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           required
         />
-        <label htmlFor="">Author</label>
+        <label htmlFor="">Email</label>
         <input
           type="text"
-          name="author"
-          value={author}
-          onChange={(e) => setAuthor(e.target.value)}
+          name="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
-        <label htmlFor="">Year</label>
+        <label htmlFor="">Age</label>
         <input
           type="text"
-          name="year"
-          value={year}
-          onChange={(e) => setYear(e.target.value)}
+          name="age"
+          value={age}
+          onChange={(e) => setage(e.target.value)}
         />
         <button>Add User</button>
       </form>

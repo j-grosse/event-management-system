@@ -33,26 +33,26 @@ const UpdateUser = () => {
     <div>
       <h2>Update User</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="">Title</label>
+        <label htmlFor="">Name</label>
         <input
           type="text"
-          name="title"
-          value={user?.title || ''}
+          name="name"
+          value={user?.name || ''}
           onChange={handleChange}
           required
         />
-        <label htmlFor="">Author</label>
+        <label htmlFor="">Email</label>
         <input
           type="text"
-          name="author"
-          value={user?.author || ''}
+          name="email"
+          value={user?.email || ''}
           onChange={handleChange}
         />
-        <label htmlFor="">Year</label>
+        <label htmlFor="">Age</label>
         <input
           type="text"
-          name="year"
-          value={user?.year || ''}
+          name="age"
+          value={user?.age || ''}
           onChange={handleChange}
         />
         <button>Update User</button>

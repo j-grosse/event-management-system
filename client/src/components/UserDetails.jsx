@@ -23,9 +23,9 @@ const UserDetails = () => {
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {user && (
         <>
-          <h2>{user.title}</h2>
-          <p>Author: {user.author}</p>
-          <p>Year: {user.year}</p>
+          <h2>{user.name}</h2>
+          <p>Email: {user.email}</p>
+          <p>Age: {user.age}</p>
           <Link to={`/users/${id}/update`}>Update User</Link>
           <button onClick={handleDelete}>Delete User</button>
         </>

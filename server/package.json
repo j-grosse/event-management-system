@@ -9,7 +9,7 @@
     "deploy": "npm i \\&& cd ../client \\&& npm start \\&& npm run build"
   },
   "keywords": [],
-  "author": "",
+  "email": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",

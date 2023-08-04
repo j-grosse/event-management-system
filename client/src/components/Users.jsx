@@ -18,7 +18,7 @@ const Users = () => {
           users.map((user) => (
             <li key={user._id}>
               <Link to={`/users/${user._id}`}>
-                {user.title} by {user.author}
+                {user.name} by {user.email}
               </Link>
             </li>
           ))}
