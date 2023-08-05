@@ -11,7 +11,7 @@ const createUser = async (req, res) => {
 };
 const getAllUsers = async (req, res) => {
   try {
-    const users = await User.find();
+    const users = await User.find({isActive: true}).exec();
     console.log('🚀 ~ file: users.js:15 ~ getAllusers ~ users:', users);
     res.json(users);
   } catch (error) {

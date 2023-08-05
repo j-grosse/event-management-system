@@ -65,7 +65,7 @@ const UpdateUser = () => {
         />
         <label htmlFor="">Active</label>
         <input
-          type="text"
+          type="checkbox"
           name="isActive"
           value={user?.isActive}
           onChange={(e) => setIsActive(e.target.value)}
