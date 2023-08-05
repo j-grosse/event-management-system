@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
 // Mongoose is a Node.js Object Data Modeling (ODM) library that provides a higher-level abstraction over the MongoDB driver, allowing you to define schemas and models for your data (which is only one way to structure a mongoDB database).
-// A mongoose model (like the one below) is a JavaScript representation of a MongoDB collection (= table):
-// this defines a schema for the documents (= entries) in the collection
-// You would then create a new instance of the model for each user you created in your application. And you then use the model methods to perform operations such as creating, querying saving, updating, and deleting user documents (= entries).
+// A mongoose model (like the one below) is a class and a general JavaScript representation of a MongoDB collection (= table).
+// It defines a schema for the documents (= entries) in the collection
+// You would then create a new instance of the MODEL CLASS to construct a document for each user you create in your application. And you then use the model methods to perform operations such as creating, querying saving, updating, and deleting user documents (= entries).
 
 const userSchema = mongoose.Schema(
   {
