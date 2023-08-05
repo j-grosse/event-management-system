@@ -7,7 +7,7 @@ const NewUser = () => {
   const [email, setEmail] = useState('');
   const [age, setAge] = useState(0);
   const [phoneNumber, setPhoneNumber] = useState('');
-  const [isActive, setIsActive] = useState(true);
+  const [isActive, setIsActive] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
 
