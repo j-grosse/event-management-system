@@ -5,9 +5,9 @@ const NewUser = () => {
   const navigate = useNavigate();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [age, setAge] = useState('');
+  const [age, setAge] = useState(0);
   const [phoneNumber, setPhoneNumber] = useState('');
-  const [isActive, setIsActive] = useState('');
+  const [isActive, setIsActive] = useState(true);
   const handleSubmit = (e) => {
     e.preventDefault();
 

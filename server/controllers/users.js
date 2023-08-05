@@ -4,7 +4,6 @@ const createUser = async (req, res) => {
   try {
     const newUser = await User.create(req.body);
     console.log('🚀 ~ file: users.js:6 ~ createUser ~ newUser:', newUser);
-
     res.status(201).json(newUser);
   } catch (error) {
     res.status(500).json({ message: error.message, errors: error.errors });
