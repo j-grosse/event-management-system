@@ -12,7 +12,7 @@ const NewUser = () => {
     e.preventDefault();
 
     axios
-      .post(`/api/users/new`, { name, email, age, phoneNumber, isActive })
+      .post(`/api/users`, { name, email, age, phoneNumber, isActive })
       .then((res) => {
         console.log(res.data);
         navigate('/');
